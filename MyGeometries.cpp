@@ -185,7 +185,7 @@ void MySetupSurfaces() {
     glEnableVertexAttribArray(vertNormal_loc);                                 // Enabled the stored normals (so they are not generic)
     // ONCE YOU HAVE TEXTURE COORDINATES WORKING FOR THE CIRCULAR SURFACE,
     //   PUT THE NEXT TWO LINES BACK IN, AND CHANGE THE STRIDE TO "8" IN THE PREVIOUS CALLS TO glVertexAttribPointer.
-    glVertexAttribPointer(vertTexCoords_loc, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(8 * sizeof(float)));	// Vertex texture coordinates in the VBO
+    glVertexAttribPointer(vertTexCoords_loc, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));	// Vertex texture coordinates in the VBO
 	glEnableVertexAttribArray(vertTexCoords_loc);									// Enable the stored vertices
 
     // No data has been loaded into the VBO's for the circular surface yet.
@@ -396,10 +396,9 @@ void SamsRemeshCircularSurf()
             *(toPtr++) = 1.0f / norm;
             *(toPtr++) = -s * rprime / norm;
 			// Add texture coordinates
-			/**(toPtr++) = 0.2 + (i)* stepsize;
-			*(toPtr++) = 0.2 + (j)* stepsize;*/
-			*(toPtr++) = 0.2 + .4243 * cos(theta);
-			*(toPtr++) = 0.2 + .4243 * sin(theta);
+			*(toPtr++) = 0.5 + (r/(5*PI)) * .4243 * cos(theta);
+			*(toPtr++) = 0.5 + (r/(5*PI)) * .4243 * sin(theta);
+
 
         }
     }
