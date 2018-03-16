@@ -114,7 +114,6 @@ const double ZextraDistanceMin = -15.0;
 const double ZextraDistanceMax = 50.0;
 int screenWidth = 800, screenHeight = 600;     // Width and height in pixels. Initially 800x600
 
-
 // *************************
 // mySetupGeometries defines the scene data, especially vertex  positions and colors.
 //    - It also loads all the data into the VAO's (Vertex Array Objects) and
@@ -125,7 +124,7 @@ void mySetupGeometries() {
  
     MySetupSurfaces();
 
-     mySetViewMatrix();
+    mySetViewMatrix();
 
     check_for_opengl_errors();   // Really a great idea to check for errors -- esp. good for debugging!
 }
@@ -348,7 +347,7 @@ void setProjectionMatrix() {
 	// Using the max & min values for x & y & z that should be visible in the window,
 	//		we set up the orthographic projection.
     // Could update the zNear and zFar each time the distance changes, but we'll avoid it for now
-    double zNear = zDistance+ZextraDistance;
+    double zNear = Max(1.0, zDistance+ZextraDistance);
     double zFar = zNear + Zmax - Zmin;
     double scale = zNear / zDistance;
     theProjectionMatrix.Set_glFrustum(-windowXmax * scale, windowXmax * scale,
