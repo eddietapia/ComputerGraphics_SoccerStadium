@@ -54,22 +54,22 @@ void MySetupLights()
     myLightSphere.InitializeAttribLocations(vertPos_loc); 
     
     // First light (light #0).
-    myLights[0].AmbientColor.Set(0.2, 0.2, 0.2);    // Gray color
-    myLights[0].DiffuseColor.Set(0.8,0.8,0.8);      // Very light gray
-    myLights[0].SpecularColor.Set(0.9, 0.9, 0.9);   // Very light gray
-    myLights[0].IsEnabled = true;                   // BE SURE TO ENABLE YOUR LIGHTS
+	myLights[0].AmbientColor.Set(.8, 0.8, 0.8);
+	myLights[0].DiffuseColor.Set(0.9, 0.9, 0.9);
+	myLights[0].SpecularColor.Set(1.0, 1.0, 1.0);   // White
+	myLights[0].IsEnabled = true;                     // BE SURE TO ENABLE YOUR LIGHTS
 
     // Second light (light #1)
-    myLights[1].AmbientColor.Set(0.4, 0.4, 0.13);    // Yellow color
-    myLights[1].DiffuseColor.Set(0.7, 0.7, 0.2);    // Yellow
-    myLights[1].SpecularColor.Set(0.7, 0.7, 0.0);   // White
+    myLights[1].AmbientColor.Set(.8, 0.8, 0.8);    
+    myLights[1].DiffuseColor.Set(0.9, 0.9, 0.9);    
+    myLights[1].SpecularColor.Set(1.0, 1.0, 1.0);   // White
     myLights[1].IsEnabled = true;                     // BE SURE TO ENABLE YOUR LIGHTS
 
     // Third light (light #2)
-    myLights[2].AmbientColor.Set(0.0, 0.4, 0.4);    // Yellow color
-    myLights[2].DiffuseColor.Set(0.3, 0.5, 0.5);      // Very light gray
-    myLights[2].SpecularColor.Set(0.6, 0.8, 0.8);   // Very light gray
-    myLights[2].IsEnabled = true;                     // BE SURE TO ENABLE YOUR LIGHTS
+	myLights[2].AmbientColor.Set(.8, 0.8, 0.8);
+	myLights[2].DiffuseColor.Set(0.9, 0.9, 0.9);
+	myLights[2].SpecularColor.Set(1.0, 1.0, 1.0);   // White
+	myLights[2].IsEnabled = true;                     // BE SURE TO ENABLE YOUR LIGHTS
 
     myLights[3].DiffuseColor.Set(0.6, 0.6, 0.6);      // Very light gray
     myLights[3].SpotCosCutoff = 0.95f;

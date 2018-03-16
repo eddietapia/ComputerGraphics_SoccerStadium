@@ -76,7 +76,7 @@ int meshRes=4;             // Resolution of the meshes (slices, stacks, and ring
 
 // These variables control the animation's state and speed.
 // YOU PROBABLY WANT TO RE-DO THIS FOR YOUR CUSTOM ANIMATION.  
-double animateIncrement = 0.01;   // Make bigger to speed up animation, smaller to slow it down.
+double animateIncrement = 0.025;   // Make bigger to speed up animation, smaller to slow it down.
 double currentTime = 0.0;         // Current "time" for the animation.
 double currentDelta = 0.0;        // Current state of the animation (YOUR CODE MAY NOT WANT TO USE THIS.)
 
